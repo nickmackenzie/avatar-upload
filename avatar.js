@@ -35,15 +35,16 @@ myDropzone.on("complete", function (file) {
   myDropzone.removeAllFiles();
 });
 
-myDropzone.on("reset", function (file) {
+myDropzone.on("reset", function () {
+  console.log("reset");
   choiceContainer.style.display = "none";
   textBox.style.display = "block";
-  imgWrap.innerHTML = `<img
-    src="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg"
+  /* imgWrap.innerHTML = `<img
+    src="https://pickaface.net/gallery/avatar/unr_example_170227_1250_yq2lr.png"
     alt="Avatar"
     class="image"
     id="img"
-  />`;
+  />`;*/
 });
 
 cancelBtn.addEventListener("click", function cancelUpload(e) {
